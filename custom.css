@@ -1,0 +1,352 @@
+/* * {
+  margin: 0;
+  padding: 0;
+}
+
+.site-content {
+  padding: 25px;
+  background-color: white;
+} */
+
+/* Style Hero */
+
+div.hero-custom {
+  background-color: black;
+}
+
+div.hero-custom .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem 0;
+}
+
+div.hero-custom .container .hero-figure {
+  width: 500px;
+  max-width: 580px;
+  height: auto;
+}
+
+div.hero-custom .container .hero-figure .hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+div.hero-custom .container .content {
+  width: 600px;
+}
+
+div.hero-custom .container .content h1 {
+  color: white;
+  font-size: 48px;
+}
+
+div.hero-custom .container .content p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  font-size: 36px;
+  margin-top: 1rem;
+}
+
+div.hero-custom .container .content p img {
+  margin-left: 15px;
+  padding-bottom: 8px;
+}
+
+div.hero-custom .container .content a {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  div.hero-custom .container {
+    flex-direction: column-reverse;
+    text-align: center;
+    height: auto;
+  }
+
+  div.hero-custom .container .content p {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  div.hero-custom .container .hero-figure,
+  div.hero-custom .container .content {
+    width: 80%;
+  }
+
+  div.hero-custom .container .content {
+    margin-top: 2rem;
+  }
+}
+
+/* Style products */
+
+div.products-custom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+div.products-custom .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48%;
+  min-width: 400px;
+  margin: 8px 8px 25px;
+  text-decoration: none;
+}
+
+div.products-custom .card:nth-child(odd) {
+  margin-left: 0;
+}
+
+div.products-custom .card:nth-child(even) {
+  margin-right: 0;
+}
+
+div.products-custom .card figure {
+  width: 95%;
+}
+
+div.products-custom .card figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+div.products-custom .card .title-card {
+  font-size: 52px;
+  text-transform: uppercase;
+  color: black;
+  margin-top: 1rem;
+}
+
+div.products-custom .card p.link-card {
+  display: inline-block;
+  background-color: #ef2929;
+  color: white;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 30px;
+}
+
+@media screen and (max-width: 992px) {
+  div.products-custom {
+    justify-content: center;
+  }
+
+  div.products-custom .card {
+    width: 80%;
+    min-width: initial;
+    margin: 8px 0 25px;
+  }
+
+  div.products-custom .card .title-card {
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  div.products-custom .card .title-card {
+    font-size: 42px;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  div.products-custom .card .title-card {
+    font-size: 36px;
+  }
+}
+
+/* Style about us */
+div.about-us-custom {
+  background-color: black;
+}
+
+div.about-us-custom .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+div.about-us-custom .wrapper .title,
+div.about-us-custom .wrapper .text {
+  color: white;
+}
+
+div.about-us-custom .wrapper .title {
+  font-size: 42px;
+  margin: 2rem auto 1rem;
+}
+
+div.about-us-custom .wrapper .text {
+  font-size: 26px;
+  margin: 1rem auto;
+}
+
+div.about-us-custom .wrapper .link {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem;
+  margin: 1rem auto 2rem;
+  border-radius: 30px;
+}
+
+@media screen and (max-width: 992px) {
+  div.about-us-custom .wrapper .title {
+    font-size: 38px;
+  }
+
+  div.about-us-custom .wrapper .text {
+    font-size: 22px;
+    margin: 1rem auto;
+  }
+}
+
+/* Custom footer */
+#site-footer {
+  padding: 0 !important;
+}
+
+div.custom-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+div.custom-footer .text-footer {
+  font-size: 20px;
+  color: black;
+}
+
+div.custom-footer .figure-logo {
+  width: 80%;
+  max-width: 100px;
+  height: auto;
+  margin: 0 auto 20px;
+}
+
+div.custom-footer .figure-logo .logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+div.custom-footer .nav-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.custom-footer .nav-footer .social-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+div.custom-footer .nav-footer .social-media .follow-us {
+  margin: 0 auto;
+  font-size: 16px;
+  color: black;
+}
+
+div.custom-footer .nav-footer .social-media .insta {
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin-left: 20px;
+}
+
+div.custom-footer .nav-footer .social-media .insta img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* About-us page */
+
+div.custom-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  max-width: 800px;
+}
+
+div.custom-page .subtitle {
+  margin: 15px 0;
+  font-size: 42px;
+}
+
+div.custom-page .text-container {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+div.custom-page .img-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 15px 0;
+}
+
+div.custom-page .img-container .figure-container {
+  width: 100%;
+  height: 400px;
+  margin: 0;
+}
+
+div.custom-page .img-container .img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Style Button */
+
+button.button,
+a.button,
+.shopkeeper-mini-cart {
+  border-radius: 30px !important;
+}

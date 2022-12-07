@@ -53,19 +53,33 @@
             </div>
 
             <div class="products-custom">
+                <?php 
+                $link_card_first = get_field('link_card_first');
+                if( $link_card_first ): 
+                    $link_url_card = $link_card_first['url'];
+                    $link_title_card = $link_card_first['title'];
+                    $link_target_card = $link_card_first['target'] ? $link_card_first['target'] : '_self';
+                    ?>
                 <a
-                href="https://kokoro-shop.fr/categorie-produit/hoodies/"
+                href="<?php echo esc_url( $link_url_card ); ?>"
+                target="<?php echo esc_attr( $link_target_hero ); ?>"
                 class="card"
                 >
+                <?php 
+                $image_card_first = get_field('image_card_first');
+                if( !empty( $image_card_first ) ): ?>
                 <figure>
                     <img
-                    src="https://kokoro-shop.fr/wp-content/uploads/2021/12/unisex-heavy-blend-hoodie-sport-grey-front-61d9d721f29e7.png"
-                    alt="hoodies"
+                        src="<?php echo esc_url($image_card_first['url']); ?>"
+                        alt="<?php echo esc_attr($image_card_first['alt']); ?>"
+                        class="hero-img"
                     />
                 </figure>
-                <h2 class="title-card">Hoodies</h2>
-                <p class="link-card">Découvrir</p>
+                <?php endif; ?>
+                <h2 class="title-card"><?php the_field('title_card_first'); ?></h2>
+                <p class="link-card"><?php echo esc_html( $link_title_card ); ?></p>
                 </a>
+                <?php endif; ?>
                 <a
                 href="https://kokoro-shop.fr/categorie-produit/t-shirts/"
                 class="card"

@@ -16,7 +16,7 @@
                 <div class="container">
                 <div class="content">
                     <h1 class="work-sans-medium">
-                    Découvre notre dernière collection
+                    <?php the_field('titre_hero'); ?>
                     </h1>
                     <p class="work-sans-medium">
                     Made by
@@ -27,19 +27,28 @@
                         alt="typologo"
                     />
                     </p>
-                    <a
-                    href="https://kokoro-shop.fr/categorie-produit/hoodies/"
-                    class="work-sans-medium"
-                    >Découvrir</a
-                    >
+                    <?php 
+                    $link_hero = get_field('link_hero');
+                    if( $link_hero ): 
+                        $link_url_hero = $link_hero['url'];
+                        $link_title_hero = $link_hero['title'];
+                        $link_target_hero = $link_hero['target'] ? $link_hero['target'] : '_self';
+                        ?>
+                        <a href="<?php echo esc_url( $link_url_hero ); ?>" target="<?php echo esc_attr( $link_target_hero ); ?>" class="work-sans-medium"><?php echo esc_html( $link_title_hero ); ?></a>
+                    <?php endif; ?>
                 </div>
-                <figure class="hero-figure">
-                    <img
-                    src="https://kokoro-shop.fr/wp-content/uploads/2022/12/logo_kokoro_3d.compress.gif"
-                    alt="logo"
-                    class="hero-img"
-                    />
-                </figure>
+                <?php 
+                $image_hero = get_field('image_hero');
+                if( !empty( $image_hero ) ): ?>
+                    <figure class="hero-figure">
+                        <img
+                        src="<?php echo esc_url($image_hero['url']); ?>"
+                        alt="<?php echo esc_attr($image_hero['alt']); ?>"
+                        class="hero-img"
+                        />
+                    </figure>
+                <?php endif; ?>
+
                 </div>
             </div>
 
@@ -102,11 +111,10 @@
                 <div class="wrapper">
                 <h2 class="title">A propos de nous ?</h2>
                 <p class="text">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
-                    enim pariatur eveniet repudiandae voluptatum et nam dolores
-                    soluta. Facilis ducimus numquam hic ullam? Dicta nulla labore
-                    alias nihil ut incidunt.
-                </p>
+                KOKORO, du japonais signifie à la fois le cœur, l’âme et
+                l’esprit soit les lignes directrices avec lesquelles le projet
+                s’est construit et continue aujourd’hui d’avancer.
+              </p>
                 <a href="#" class="link">En savoir plus</a>
                 </div>
             </div>
